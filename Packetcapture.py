@@ -1,5 +1,8 @@
 from scapy.all import sniff, IP, TCP
+import numpy as np
+
 import time
+
 
 packet_lengths = []
 fwd_packet_lengths = []
@@ -8,23 +11,27 @@ fwd_packets = 0
 bwd_packets = 0
 start_time = time.time()
 
+
+
 def packet_callback(packet):
     global fwd_packets, bwd_packets
     if IP in packet and TCP in packet:
         packet_length = len(packet)
         packet_lengths.append(packet_length)
 
-        if packet[IP].src == 'source_ip':  # Replace 'source_ip' with the actual source IP
+        if packet[IP].src == '127.0.0.1':  # Replace 'source_ip' with the actual source IP
             fwd_packet_lengths.append(packet_length)
             fwd_packets += 1
         else:
             bwd_packet_lengths.append(packet_length)
             bwd_packets += 1
 
-sniff(prn=packet_callback, store=0, timeout=60)  # Capture packets for 60 seconds
+sniff(prn=packet_callback, store=0, timeout=15)  # Capture packets for 60 seconds
 
 end_time = time.time()
 duration = end_time - start_time
+
+
 
 # Calculate features
 avg_packet_size = np.mean(packet_lengths)
