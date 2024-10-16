@@ -26,7 +26,7 @@ def packet_callback(packet):
             bwd_packet_lengths.append(packet_length)
             bwd_packets += 1
 
-sniff(prn=packet_callback, store=0, timeout=15)  # Capture packets for 60 seconds
+sniff(prn=packet_callback, store=0, timeout=15)  # Set TimeOut accordingly
 
 end_time = time.time()
 duration = end_time - start_time
@@ -49,6 +49,7 @@ fwd_packets_per_second = fwd_packets / duration
 flow_packets_per_second = (fwd_packets + bwd_packets) / duration
 flow_bytes_per_second = sum(packet_lengths) / duration
 
+"""
 print(f"Avg Packet Size: {avg_packet_size}")
 print(f"Packet Length Mean: {packet_length_mean}")
 print(f"Packet Length Std: {packet_length_std}")
@@ -61,3 +62,14 @@ print(f"Bwd Packet Length Max: {bwd_packet_length_max}")
 print(f"Fwd Packets/s: {fwd_packets_per_second}")
 print(f"Flow Packets/s: {flow_packets_per_second}")
 print(f"Flow Bytes/s: {flow_bytes_per_second}")
+"""
+
+feature_vector = np.array([
+    avg_packet_size, packet_length_mean, bwd_packet_length_std, packet_length_variance,
+    bwd_packet_length_max, packet_length_max, packet_length_std, fwd_packet_length_mean,
+    fwd_packet_length_mean, flow_bytes_per_second, fwd_packet_length_mean, bwd_packet_length_mean,
+    fwd_packets_per_second, flow_packets_per_second, 0, 0, 0, 0, 0, 0
+]).reshape(1, -1)
+feature_vector_normalized = apply_normalization(feature_vector, method=normalization_method)
+prediction = ensemble_model.predict(feature_vector_normalized)
+print(f"Predicted Class: {prediction[0]}")
