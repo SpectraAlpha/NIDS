@@ -1,0 +1,122 @@
+pybind11
+
+copying src/cicflowmeter.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/cicflowmeter.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/cicflowmeter.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/cicflowmeter.egg-info/entry_points.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/cicflowmeter.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/cicflowmeter.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+zip_safe flag not set; analyzing archive contents...
+creating 'dist/cicflowmeter-0.1.6-py3.12.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing cicflowmeter-0.1.6-py3.12.egg
+Removing /usr/local/python/3.12.1/lib/python3.12/site-packages/cicflowmeter-0.1.6-py3.12.egg
+Copying cicflowmeter-0.1.6-py3.12.egg to /usr/local/python/3.12.1/lib/python3.12/site-packages
+Adding cicflowmeter 0.1.6 to easy-install.pth file
+Installing cicflowmeter script to /home/codespace/.python/current/bin
+
+Installed /usr/local/python/3.12.1/lib/python3.12/site-packages/cicflowmeter-0.1.6-py3.12.egg
+Processing dependencies for cicflowmeter==0.1.6
+Searching for scipy==1.6.0
+Reading https://pypi.org/simple/scipy/
+Downloading https://files.pythonhosted.org/packages/16/48/ff7026d26dfd92520f00b109333e22c05a235f0c9115a5a2d7679cdf39ef/scipy-1.6.0.tar.gz#sha256=cb6dc9f82dfd95f6b9032a8d7ea70efeeb15d5b5fd6ed4e8537bb3c673580566
+Best match: scipy 1.6.0
+Processing scipy-1.6.0.tar.gz
+Writing /tmp/easy_install-x9dswjcn/scipy-1.6.0/setup.cfg
+Running scipy-1.6.0/setup.py -q bdist_egg --dist-dir /tmp/easy_install-x9dswjcn/scipy-1.6.0/egg-dist-tmp-1ddzl3qy
+/tmp/easy_install-x9dswjcn/scipy-1.6.0/setup.py:461: UserWarning: Unrecognized setuptools command ('-q bdist_egg --dist-dir /tmp/easy_install-x9dswjcn/scipy-1.6.0/egg-dist-tmp-1ddzl3qy'), proceeding with generating Cython sources and expanding templates
+  warnings.warn("Unrecognized setuptools command ('{}'), proceeding with "
+Traceback (most recent call last):
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 165, in save_modules
+    yield saved
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 207, in setup_context
+    yield
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 268, in run_setup
+    _execfile(setup_script, ns)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 50, in _execfile
+    exec(code, globals, locals)
+  File "/tmp/easy_install-x9dswjcn/scipy-1.6.0/setup.py", line 588, in <module>
+  File "/tmp/easy_install-x9dswjcn/scipy-1.6.0/setup.py", line 563, in setup_package
+ModuleNotFoundError: No module named 'numpy.distutils'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/NIDS/cicflowmeter/setup.py", line 58, in <module>
+    setup(
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/__init__.py", line 117, in setup
+    return distutils.core.setup(**attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/_distutils/core.py", line 183, in setup
+    return run_commands(dist)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/_distutils/core.py", line 199, in run_commands
+    dist.run_commands()
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/_distutils/dist.py", line 954, in run_commands
+    self.run_command(cmd)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/dist.py", line 950, in run_command
+    super().run_command(command)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/_distutils/dist.py", line 973, in run_command
+    cmd_obj.run()
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/install.py", line 97, in run
+    self.do_egg_install()
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/install.py", line 158, in do_egg_install
+    cmd.run(show_deprecation=False)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/easy_install.py", line 439, in run
+    self.easy_install(spec, not self.no_deps)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/easy_install.py", line 689, in easy_install
+    return self.install_item(None, spec, tmpdir, deps, True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/easy_install.py", line 739, in install_item
+    self.process_distribution(spec, dist, deps)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/easy_install.py", line 788, in process_distribution
+    distros = WorkingSet([]).resolve(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pkg_resources/__init__.py", line 897, in resolve
+    dist = self._resolve_dist(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pkg_resources/__init__.py", line 933, in _resolve_dist
+    dist = best[req.key] = env.best_match(
+                           ^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pkg_resources/__init__.py", line 1271, in best_match
+    return self.obtain(req, installer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pkg_resources/__init__.py", line 1307, in obtain
+    return installer(requirement) if installer else None
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/easy_install.py", line 712, in easy_install
+    return self.install_item(spec, dist.location, tmpdir, deps)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/easy_install.py", line 737, in install_item
+    dists = self.install_eggs(spec, download, tmpdir)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/easy_install.py", line 934, in install_eggs
+    return self.build_and_install(setup_script, setup_base)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/easy_install.py", line 1206, in build_and_install
+    self.run_setup(setup_script, setup_base, args)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/command/easy_install.py", line 1192, in run_setup
+    run_setup(setup_script, args)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 258, in run_setup
+    with setup_context(setup_dir):
+  File "/home/codespace/.python/current/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 199, in setup_context
+    with save_modules():
+  File "/home/codespace/.python/current/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 178, in save_modules
+    saved_exc.resume()
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 152, in resume
+    raise exc.with_traceback(self._tb)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 165, in save_modules
+    yield saved
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 207, in setup_context
+    yield
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 268, in run_setup
+    _execfile(setup_script, ns)
+  File "/home/codespace/.local/lib/python3.12/site-packages/setuptools/sandbox.py", line 50, in _execfile
+    exec(code, globals, locals)
+  File "/tmp/easy_install-x9dswjcn/scipy-1.6.0/setup.py", line 588, in <module>
+  File "/tmp/easy_install-x9dswjcn/scipy-1.6.0/setup.py", line 563, in setup_package
+ModuleNotFoundError: No module named 'numpy.distutils'
